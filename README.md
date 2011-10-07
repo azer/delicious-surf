@@ -1,8 +1,7 @@
-Delicious Surf is a fork of Surf web browser customized for del.icio.us. It
-makes easier to access and organize your bookmarks on Delicious by giving you
-some shortcuts and keeping an offline copy.
+Delicious Surf makes fast and easier to access and organize your bookmarks on del.icio.us, by keeping a copy of your all bookmarks in your home directory,
 
 Tested Platforms: Linux
+
 Dependencies: dmenu, libwebkit, xorg-prop, wget
 
 Install
@@ -31,8 +30,6 @@ As you see, URL bar is also a search bar. You can query your history and use
 some special keywords to search the web. See "Search Engines" section for
 details.
 
-When something happes to your Delicious.com account, your bookmarks will be in
-safe with the offline copy located in your home directory (~/.local/share/delicious-surf)
 
 Besides of safety of your links, offline copy makes quite faster to query your
 bookmarks. **ctrl+b** opens a bookmarking bar that helps you to search your
