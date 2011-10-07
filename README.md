@@ -52,11 +52,39 @@ currently broken. Press ESC button when you're done.
 Tabbing
 =======
 Delicious Surf does not support tabbing. Check out the alternatives listed below;
+
 - [XMonad.Layout.Tabbed](http://xmonad.org/xmonad-docs/xmonad-contrib/XMonad-Layout-Tabbed.html (The one shown in screenshot #1)
-- [TABBED](http://tools.suckless.org/tabbed
+- [TABBED](http://tools.suckless.org/tabbed)
 
 Search Engines
 ==============
+Delicious Surf's URL bar contains some quick ways to search delicious.com and major search engines. For example, 
+you can serach delicious.com by typing "s travel" or access a popular links page by typing "p travel". Here below 
+is the full list of search engines;
+
+Delicious:
+
+- Search: `s $keyword` 
+- Popular: `p $keyword`
+
+Google:
+
+- Search: `g $keyword`
+- Code Search: `gc $keyword`
+- Dictionary: `dict $keyword`
+ 
+Wikipedia:
+
+- English:`w $title`
+
+Others:
+
+- Duck Duck Go: `ddg $keyword`
+- WolframAlpha: `wa $query`
+- StackOverflow: `so $keyword`
+- LastFM: `lastfm $music`
+- Flickr: `flickr $keyword`
+- IMDB: `imdb $keyword`
 
 Keybindings
 ===========
