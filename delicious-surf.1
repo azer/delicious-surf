@@ -1,0 +1,99 @@
+.TH DELICIOUS SURF 1 delicious-surf\-VERSION
+.SH NAME
+delicious surf \- the web browser customized for delicious.com
+.SH SYNOPSIS
+.B delicious-surf
+.RB [-e\ xid]
+.RB [-i]
+.RB [-p]
+.RB [-s]
+.RB [-v]
+.RB [-x]
+.RB "URI"
+.SH DESCRIPTION
+Delicious Surf is a fork of Surf that is customized for Delicious.com. Without
+any extension or configuration requirement, it provides a simple way to access
+and organize your bookmarks.
+.SH OPTIONS
+.TP
+.B \-e xid
+Reparents to window specified by xid.
+.TP
+.B \-i
+Disable Images
+.TP
+.B \-p
+Disable Plugins
+.TP
+.B \-s
+Disable Javascript
+.TP
+.B \-v
+Prints version information to standard output, then exits.
+.TP
+.B \-x
+Prints xid to standard output. This can be used to script the browser by using
+.BR xprop(1).
+.SH USAGE
+.B Escape
+Stops loading current page or stops download.
+.TP
+.B Ctrl\-h
+Walks back the history.
+.TP
+.B Ctrl\-l
+Walks forward the history.
+.TP
+.B Ctrl\-k
+Scrolls page upwards.
+.TP
+.B Ctrl\-j
+Scrolls page downwards.
+.TP
+.B Ctrl\-Shift\-k
+Zooms page in.
+.TP
+.B Ctrl\-Shift\-j
+Zooms page out
+.TP
+.B Ctrl\-Shift\-i
+Resets Zoom
+.TP
+.B Ctrl\-/
+Opens the search-bar.
+.TP
+.B Ctrl\-n
+Go to next search result.
+.TP
+.B Ctrl\-Shift\-n
+Go to previous search result.
+.TP
+.B Ctrl\-g
+Opens the URL-bar.
+.TP
+.B Ctrl\-p
+Loads URI from primary selection.
+.TP
+.B Ctrl\-Shift\-p
+Calls Printpage Dialog.
+.TP
+.B Ctrl\-r
+Reloads the website.
+.TP
+.B Ctrl\-Shift\-r
+Reloads the website without using cache.
+.TP
+.B Ctrl\-y
+Copies current URI to primary selection.
+.TP
+.B Ctrl\-o
+show the sourcecode of the current page.
+.B Ctrl\-d
+Calls Add Bookmark Dialog.
+.B Ctrl\-b
+Opens the bookmarks-bar
+.SH SEE ALSO
+.BR dmenu(1)
+.BR xprop(1)
+.SH BUGS
+Please report them!

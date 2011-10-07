@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+    <title>Delicious Surf</title>
+    <style type="text/css" media="screen">
+      html, body { margin:0; padding:0; background:#fafafa; }
+
+      form { width:500px; margin:200px auto; text-align:center; padding-left:20px; background:url(http://s3.amazonaws.com/AVOS/flw-delicious.gif) no-repeat left center; }
+      form * { background:#fff; font:12px Arial,sans-serif; }
+      form input { border:1px inset #ccc; padding:5px; width:400px; }
+      form button { border:1px outset #eee; padding:5px 10px; cursor:pointer; background:#ccc; }
+      form button:hover { background:#ffaa00; color:#fff; border-color:#bbaa00; }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      addEventListener('DOMContentLoaded', function(){
+        document.getElementById('searchbox').focus();
+      }, false); 
+    </script>
+  </head>
+  <body>
+    <form action="http://delicious.com/search" method="get" accept-charset="utf-8">
+      <input type="text" name="p" id="searchbox" value="">
+      <button>Search</button> 
+    </form>
+  </body>
+</html>
