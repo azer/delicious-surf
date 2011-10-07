@@ -17,7 +17,7 @@ $ sudo make install
 
 Screenshot
 ==========
-![Delicious Surf in Xmonad Desktop Environment](http://farm7.static.flickr.com/6060/6218262253_ecb3bf4e8c_z.jpg)
+[![Delicious Surf in Xmonad Desktop Environment](http://farm7.static.flickr.com/6060/6218262253_ecb3bf4e8c_z.jpg)](http://www.flickr.com/photos/azer/6218262253/sizes/l/in/photostream/)
 
 Quick Introduction
 ==================
@@ -75,7 +75,7 @@ Google:
  
 Wikipedia:
 
-- English:`w $title`
+- English: `w $title`
 
 Others:
 
@@ -88,7 +88,28 @@ Others:
 
 Keybindings
 ===========
-
+- `Ctrl-g` Opens the URL-bar.
+- `Ctrl-b` Opens the Bookmarks-bar
+- `Ctrl-d` Calls the New Bookmark Dialog.
+- `Escape` Stops loading current page or stops download.
+- `Ctrl-h` Walks back the history.
+- `Ctrl-l` Walks forward the history.
+- `Ctrl-k` Scrolls page upwards.
+- `Ctrl-j` Scrolls page downwards.
+- `Ctrl-Shift-k` Zooms page in.
+- `Ctrl-Shift-j` Zooms page out
+- `Ctrl-Shift-i` Resets Zoom
+- `Ctrl-f` Opens the search-bar.
+- `Ctrl-n` Go to next search result.
+- `Ctrl-Shift-n` Go to previous search result.
+- `Ctrl-p` Loads URI from primary selection.
+- `Ctrl-Shift-p` Calls Printpage Dialog.
+- `Ctrl-r` Reloads the website.
+- `Ctrl-Shift-r` Reloads the website without using cache.
+- `Ctrl-y` Copies current URI to primary selection.
+- `Ctrl-o` Show the sourcecode of the current page.
 
 See Also
 =======
+- [surf](http://surf.suckless.org)
+- [dmenu](http://dmenu.suckless.org)
