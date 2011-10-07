@@ -1,4 +1,4 @@
-By keeping a copy of your all bookmarks in your home directory, Delicious Surf makes fast and easier to access and organize your bookmarks on del.icio.us.
+Delicious Surf makes fast and easier to access and organize your bookmarks on del.icio.us, by keeping a copy of your all bookmarks in your home directory,
 
 Tested Platforms: Linux
 
