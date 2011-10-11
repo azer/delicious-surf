@@ -2,7 +2,7 @@ source ~/.delicious-surf
 
 url="$1"
 tags=""
-recoms=$(. ~/.opt/delicious-surf/reco.sh $url)
+recoms=$(. ~/.opt/delicious-surf/suggest.sh $url)
 
 prompt=1
 
