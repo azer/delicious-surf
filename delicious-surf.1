@@ -35,8 +35,17 @@ Prints version information to standard output, then exits.
 Prints xid to standard output. This can be used to script the browser by using
 .BR xprop(1).
 .SH USAGE
+.TP
+.B Ctrl\-g
+Opens the URL-bar.
 .B Escape
 Stops loading current page or stops download.
+.TP
+.B Ctrl\-d
+Calls Add Bookmark Dialog.
+.TP
+.B Ctrl\-b
+Opens the bookmarks-bar
 .TP
 .B Ctrl\-h
 Walks back the history.
@@ -68,9 +77,6 @@ Go to next search result.
 .B Ctrl\-Shift\-n
 Go to previous search result.
 .TP
-.B Ctrl\-g
-Opens the URL-bar.
-.TP
 .B Ctrl\-p
 Loads URI from primary selection.
 .TP
@@ -88,10 +94,6 @@ Copies current URI to primary selection.
 .TP
 .B Ctrl\-o
 show the sourcecode of the current page.
-.B Ctrl\-d
-Calls Add Bookmark Dialog.
-.B Ctrl\-b
-Opens the bookmarks-bar
 .SH SEE ALSO
 .BR dmenu(1)
 .BR xprop(1)
