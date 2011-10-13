@@ -1,4 +1,4 @@
-Delicious Surf is a fork of Suckless' Surf with some improvements and additional features that makes easier to access and organize your bookmarks on del.icio.us.
+Delicious Surf is a web browser that makes easier to access and organize your bookmarks on del.icio.us.
 
 Tested Platforms: Linux
 
@@ -14,7 +14,7 @@ $ make sync
 $ sudo make install
 ```
 
-The installation ($ make build) creates following directory tree in your home directory;
+The installation creates following directory tree in your home directory;
 
 * ~/.local/share/delicious-surf
     - bookmarks
