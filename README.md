@@ -14,10 +14,7 @@ $ make sync
 $ sudo make install
 ```
 
-Configuration
-=============
-
-First step of the installation ($ make build) creates following directory tree in your home directory;
+The installation ($ make build) creates following directory tree in your home directory;
 
 * ~/.local/share/delicious-surf
     - bookmarks
