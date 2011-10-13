@@ -1,7 +1,6 @@
-Delicious Surf is a web browser that makes easier to access and organize your bookmarks on del.icio.us.
+Delicious Surf is a fork of Surf web browser. It makes easier to access and organize your bookmarks on del.icio.us.
 
 Tested Platforms: Linux
-
 Dependencies: dmenu, libwebkit, xorg-prop, wget
 
 Install
