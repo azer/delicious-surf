@@ -106,6 +106,7 @@ Others:
 - IMDB: `imdb $keyword`
 - Amazon: `amazon $keyword`
 - Youtube: `youtube $keyword`
+- Github: `github $keyword`
 
 
 Keybindings
