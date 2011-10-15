@@ -104,6 +104,9 @@ Others:
 - LastFM: `lastfm $music`
 - Flickr: `flickr $keyword`
 - IMDB: `imdb $keyword`
+- Amazon: `amazon $keyword`
+- Youtube: `youtube $keyword`
+
 
 Keybindings
 ===========

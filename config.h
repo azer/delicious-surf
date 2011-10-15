@@ -24,7 +24,10 @@ static SearchEngine searchengines[] = {
   { "dict", "http://www.google.com/#q=%s&tbs=dfn:1" },
   { "lastfm", "http://last.fm/music/%s" },
   { "flickr", "http://flickr.com/search/?q=%s&m=tags&s=int" },
-  { "imdb",   "http://google.com/search?q=site:imdb.com%20%s&num=100" }
+  { "imdb",   "http://google.com/search?q=site:imdb.com%20%s&num=100" },
+  { "youtube", "http://www.youtube.com/results?search_query=%s" },
+  { "amazon", "http://www.amazon.com/s/?field-keywords=%s" },
+  { "github", "https://github.com/search?q=%s" }
 };
 
 #define HOMEPAGE "file://"HOMEDIR"/.local/share/delicious-surf/homepage.html"
