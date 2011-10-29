@@ -8,6 +8,7 @@ static char *scriptfile     = ".local/share/delicious-surf/script.js";
 static char *cookiefile     = ".local/share/delicious-surf/cookies.txt";
 static char *historyfile    = ".local/share/delicious-surf/history";
 static time_t sessiontime   = 3600;
+static char *default_search_engine = "g"; // see searchengines[] below v
 
 static SearchEngine searchengines[] = {
   { "p", "http://delicious.com/popular/%s" },
@@ -81,4 +82,3 @@ static Key keys[] = {
     { MODKEY,               GDK_b,      spawn,      LOADBMK("_SURF_URI") },
     { MODKEY|GDK_SHIFT_MASK,GDK_n,      find,       { .b = FALSE } },
 };
-

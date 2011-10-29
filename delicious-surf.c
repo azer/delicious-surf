@@ -576,7 +576,7 @@ gchar *
 parseuri(const gchar *uri) {
   guint i;
 
-  uri = g_strrstr(uri, ".") ? g_strdup(uri) : g_strdup_printf("g %s", uri);
+  uri = g_strrstr(uri, ".") ? g_strdup(uri) : g_strdup_printf("%s %s", default_search_engine, uri);
 
   for (i = 0; i < LENGTH(searchengines); i++) {
     if (searchengines[i].token == NULL || searchengines[i].uri == NULL || *(uri + strlen(searchengines[i].token)) != ' ')
