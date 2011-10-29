@@ -158,7 +158,7 @@ runscript(WebKitWebFrame *frame, JSContextRef js) {
 	char *script;
 	JSValueRef exception = NULL;
 	GError *error;
-	
+
 	if(g_file_get_contents(scriptfile, &script, NULL, &error)) {
 		jsscript = JSStringCreateWithUTF8CString(script);
 		JSEvaluateScript(js, jsscript, JSContextGetGlobalObject(js), NULL, 0, &exception);
@@ -397,8 +397,7 @@ loaduri(Client *c, const Arg *arg) {
 
 	if(strcmp(uri, "") == 0)
 		return;
-	u = g_strrstr(uri, "://") ? g_strdup(uri)
-		: g_strdup_printf("http://%s", uri);
+
   u = parseuri(uri);
 	/* prevents endless loop */
 	if(c->uri && strcmp(u, c->uri) == 0) {
@@ -576,6 +575,9 @@ newwindow(Client *c, const Arg *arg) {
 gchar *
 parseuri(const gchar *uri) {
   guint i;
+
+  uri = g_strrstr(uri, ".") ? g_strdup(uri) : g_strdup_printf("g %s", uri);
+
   for (i = 0; i < LENGTH(searchengines); i++) {
     if (searchengines[i].token == NULL || searchengines[i].uri == NULL || *(uri + strlen(searchengines[i].token)) != ' ')
       continue;
