@@ -11,7 +11,7 @@ static time_t sessiontime   = 3600;
 static char *default_search_engine = "g"; // see searchengines[] below v
 
 static SearchEngine searchengines[] = {
-  { "p", "http://delicious.com/popular/%s" },
+  { "p", "http://delicious.com/tag/popular/%s" },
   { "s", "http://delicious.com/search?p=%s" },
 
   { "g",   "http://www.google.com/search?q=%s" },
