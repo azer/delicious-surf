@@ -583,7 +583,7 @@ parseuri(const gchar *uri) {
       return g_strdup_printf(searchengines[i].uri, uri + strlen(searchengines[i].token) + 1);
   }
 
-  uri = g_strrstr(uri, ".") ? g_strdup(uri) : parseuri(g_strdup_printf("%s %s", default_search_engine, uri));
+  uri = g_strrstr(uri, ".") || g_strrstr(uri, "://") ? g_strdup(uri) : parseuri(g_strdup_printf("%s %s", default_search_engine, uri));
 
   return g_strrstr(uri, "://") ? g_strdup(uri) : g_strdup_printf("http://%s", uri);
 }
