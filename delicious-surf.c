@@ -812,7 +812,7 @@ updatewinid(Client *c) {
 
 void
 usage(void) {
-	fputs("delicious surf - browser customized for delicious.com\n", stderr);
+	fputs("delicious surf - a browser for better bookmarking\n", stderr);
 	die("usage: delicious-surf [-e xid] [-i] [-p] [-s] [-v] [-x] [uri]\n");
 }
 
