@@ -1,7 +1,10 @@
-if [ ! $PROMPT]; then
+echo "--$1-"
+
+
+if [ ! $1 ]; then
   prompt_script=~/.opt/delicious-surf/list.sh
 else
-  prompt_script=$PROMPT
+  prompt_script=~/.opt/delicious-surf/$1.sh
 fi
 
 goto=$(. $prompt_script)
