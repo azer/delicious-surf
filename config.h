@@ -1,6 +1,8 @@
 /* modifier 0 means no modifier */
 static char *homedir        = HOMEDIR;
-static char *useragent      = "Surf/"VERSION" (X11; U; Unix; en-US) AppleWebKit/531.2+ Compatible (Safari)";
+static char *download_dir   = "~/downloads";
+//static char *useragent      = "Surf/"VERSION" (X11; U; Unix; en-US) AppleWebKit/531.2+ Compatible (Safari)";
+static char *useragent      = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.102 Safari/535.2";
 static char *progress       = "#FF0000";
 static char *progress_trust = "#00FF00";
 static char *stylefile      = ".local/share/delicious-surf/style.css";
@@ -8,7 +10,7 @@ static char *scriptfile     = ".local/share/delicious-surf/script.js";
 static char *cookiefile     = ".local/share/delicious-surf/cookies.txt";
 static char *historyfile    = ".local/share/delicious-surf/history";
 static time_t sessiontime   = 3600;
-static char *default_search_engine = "g"; // see searchengines[] below v
+static char *default_search_engine = "wa"; // see searchengines[] below v
 
 static SearchEngine searchengines[] = {
   { "p", "http://delicious.com/tag/popular/%s" },
@@ -22,7 +24,7 @@ static SearchEngine searchengines[] = {
   { "w",   "http://en.wikipedia.org/w/index.php?title=Special:Search&search=%s&go=Go" },
 
   { "so", "http://google.com/search?hl=en&safe=off&num=100&q=site:stackoverflow.com+%s&aq=f&oq=&aqi=" },
-  { "dict", "http://www.google.com/#q=%s&tbs=dfn:1" },
+  { "dict", "https://www.google.com/#q=%s&tbs=dfn:1" },
   { "lastfm", "http://last.fm/music/%s" },
   { "flickr", "http://flickr.com/search/?q=%s&m=tags&s=int" },
   { "imdb",   "http://google.com/search?q=site:imdb.com%20%s&num=100" },
@@ -43,7 +45,7 @@ static SearchEngine searchengines[] = {
 
 #define DOWNLOAD(d) { \
 	.v = (char *[]){ "/bin/sh", "-c", \
-	"xterm -e \"wget --load-cookies ~/.local/share/delicious-surf/cookies.txt '$0';\"", \
+	"xterm -e \"cd "*download_dir" && wget --load-cookies ~/.local/share/delicious-surf/cookies.txt '$0';\"", \
 	d, NULL } }
 
 #define SETURI(p)       { .v = (char *[]){ "/bin/sh", "-c", \
