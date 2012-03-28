@@ -80,6 +80,5 @@ uninstall:
 	@rm -f ${DESTDIR}${PREFIX}/bin/delicious-surf
 	@echo removing manual page from ${DESTDIR}${MANPREFIX}/man1
 	@rm -f ${DESTDIR}${MANPREFIX}/man1/delicious-surf.1
-	@rm -rf ~/.opt/delicious-surf
 
 .PHONY: all options clean dist install uninstall

@@ -1,6 +1,5 @@
 /* modifier 0 means no modifier */
 static char *homedir        = HOMEDIR;
-static char *download_dir   = "~/downloads";
 //static char *useragent      = "Surf/"VERSION" (X11; U; Unix; en-US) AppleWebKit/531.2+ Compatible (Safari)";
 static char *useragent      = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.102 Safari/535.2";
 static char *progress       = "#FF0000";
@@ -10,7 +9,7 @@ static char *scriptfile     = ".local/share/delicious-surf/script.js";
 static char *cookiefile     = ".local/share/delicious-surf/cookies.txt";
 static char *historyfile    = ".local/share/delicious-surf/history";
 static time_t sessiontime   = 3600;
-static char *default_search_engine = "wa"; // see searchengines[] below v
+static char *default_search_engine = "g"; // see searchengines[] below v
 
 static SearchEngine searchengines[] = {
   { "p", "http://delicious.com/tag/popular/%s" },
@@ -43,10 +42,16 @@ static SearchEngine searchengines[] = {
 	"xprop -id $2 -f $1 8s -set $1 \"$prop\"", \
 	p, q, winid, NULL } }
 
-#define DOWNLOAD(d) { \
+#define SETPROP_FIND(p, q)     { .v = (char *[]){ "/bin/sh", "-c", \
+	"prop=\"`xprop -id $2 $0 | cut -d '\"' -f 2 | ~/.opt/delicious-surf/find.sh`\" &&" \
+	"xprop -id $2 -f $1 8s -set $1 \"$prop\"", \
+	p, q, winid, NULL } }
+
+#define DOWNLOAD(d) {			  \
 	.v = (char *[]){ "/bin/sh", "-c", \
-	"xterm -e \"cd "*download_dir" && wget --load-cookies ~/.local/share/delicious-surf/cookies.txt '$0';\"", \
-	d, NULL } }
+	"xterm -e \"cd "HOMEDIR"/downloads && wget '$0' \
+--load-cookies ~/.local/share/delicious-surf/cookies.txt \
+--user-agent '$1' ; sleep 5\"", d, useragent, NULL } }
 
 #define SETURI(p)       { .v = (char *[]){ "/bin/sh", "-c", \
 "prop=\"`dmenu`\" &&" \
@@ -77,7 +82,7 @@ static Key keys[] = {
     { 0,                    GDK_Escape, stop,       { 0 } },
     { MODKEY,               GDK_o,      source,     { 0 } },
     { MODKEY,               GDK_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO") },
-    { MODKEY,               GDK_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
+    { MODKEY,               GDK_f,      spawn,      SETPROP_FIND("_SURF_FIND", "_SURF_FIND") },
     { MODKEY,               GDK_n,      find,       { .b = TRUE } },
     { MODKEY,               GDK_Return, spawn,      SETURI("_SURF_URI") },
     { MODKEY,               GDK_d,      spawn,      ADDBMK },
