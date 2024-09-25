@@ -38,7 +38,8 @@ The installation creates following directory tree in your home directory;
 
 Screenshot
 ==========
-[![Delicious Surf in Xmonad Desktop Environment](http://farm7.static.flickr.com/6060/6218262253_ecb3bf4e8c_z.jpg)](http://www.flickr.com/photos/azer/6218262253/sizes/l/in/photostream/)
+![6218262253_662fe7388a_o](https://github.com/user-attachments/assets/6636d28d-67d1-460b-b7ab-b2fb2ca4b58c)
+
 
 Quick Introduction
 ==================
