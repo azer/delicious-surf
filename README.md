@@ -73,7 +73,7 @@ Tabbing
 =======
 Delicious Surf does not support tabbing. Check out the alternatives listed below;
 
-- [XMonad.Layout.Tabbed](http://xmonad.org/xmonad-docs/xmonad-contrib/XMonad-Layout-Tabbed.html (The one shown in screenshot #1)
+- [XMonad.Layout.Tabbed](http://xmonad.org/xmonad-docs/xmonad-contrib/XMonad-Layout-Tabbed.html) (The one shown in screenshot #1)
 - [TABBED](http://tools.suckless.org/tabbed)
 
 Search Engines
